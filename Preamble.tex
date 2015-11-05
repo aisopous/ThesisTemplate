@@ -1,0 +1,119 @@
+% ************************************************************************************************************
+%
+% Preamble.tex
+%
+% Contains document specifications, package includes, environment definitions (e.g. theorems)
+% and name and title variables. Might be a good idea to set them here.
+%
+% Option for binding margins is included (ctrl+f "bind")
+%
+% ************************************************************************************************************
+
+
+% Document class properties can and should be played around until the author is happy with the appearence. Refer to
+% LaTeX manuals for a list of settings.
+\documentclass[
+12pt, % Main document font size.
+reqno, % Right sided equation numbering, obviously.
+a4paper % For some reason some TeX distributions set default paper size as US letter size.
+]{report}
+
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{fancyhdr}
+\usepackage{latexsym,amssymb,amsmath}
+\usepackage[all,ps,cmtip]{xy}
+\usepackage{enumerate}
+\usepackage{listings}
+\usepackage{courier}
+\usepackage{ytableau}
+\usepackage{subfig}
+\usepackage{tikz-cd}
+\usepackage{youngtab}
+\usepackage{xfrac}
+\usepackage{mathrsfs}
+\usepackage{calligra}
+\usepackage[refpage]{nomencl}
+\newcommand{\bigslant}[2]{{\raisebox{.2em}{$#1$}\big/\raisebox{-.2em}{$#2$}}}
+
+
+
+%The following fixes the numbering of theorems in sectionless chapters! (if needed:)
+%\makeatletter
+%\@addtoreset{theorem}{chapter}%
+%\@addtoreset{theorem}{section}%
+%\makeatother
+%
+% \let\OriginalTheTheorem\thetheorem
+% \renewcommand{\thetheorem}{%
+% \ifnumequal{\number\value{section}}{0}{\thechapter.\arabic{theorem}}{%
+% \OriginalTheTheorem}}
+%\linespread{1.3}
+\usepackage[toc,page]{appendix}
+
+% Resolved conflicting definitions of \O by defining sheafy O to be \shO instead of \O for now.
+%\renewcommand{\O}  {\mathcal{O}}
+\newcommand{\shO}  {\mathcal{O}}
+
+\theoremstyle{plain}
+%\newcommand{\sslash}{\mathbin{/\mkern-6mu/}}
+\newtheorem{innercustomthm}{Theorem}
+\newenvironment{summarythm}[1]
+  {\renewcommand\theinnercustomthm{#1}\innercustomthm}
+  {\endinnercustomthm}
+
+\newtheorem{conj}{Conjecture}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{claim}[theorem]{Claim}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{construction}[theorem]{Construction}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{examples}[theorem]{Examples}
+\newtheorem{acknowledgement}{Acknowledgement}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}[theorem]{Remarks}
+\newtheorem{question}[theorem]{Question}
+
+\usepackage[section]{placeins}
+\usepackage[format=hang]{caption}
+\usepackage[format=hang]{caption}
+\lstset{
+        basicstyle=\footnotesize, % Standardschrift
+        breaklines=true,            % Zeilen werden Umgebrochen
+}%\usepackage{bookmark}
+
+\usepackage{custom}
+
+\renewcommand\baselinestretch{1.2}
+% don't let large figures hijack entire pages
+\renewcommand\topfraction{.9}
+\renewcommand\textfraction{.1}
+\renewcommand\floatpagefraction{.8}
+
+\usepackage[twoside]{geometry}
+
+% BINDING: Use the following line instead if you wish to print the thesis for binding!
+% The instruction for extra .5cm in the binding edge is from Wilson & sons.
+% \usepackage[twoside, bindingoffset=-0.5cm]{geometry}
+
+
+\usepackage{url}
+\usepackage[colorlinks=false, linktocpage=true]{hyperref}
+
+
+\newcommand\MyName{Mathem. A. Tician}
+\newcommand\MyTitle{My thesis title}
+
+\title{\MyTitle}
+\author{\MyName}
+
+%preamble(end)

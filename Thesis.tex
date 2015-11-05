@@ -1,0 +1,41 @@
+
+% ******************************************************************************************************************
+%
+% Thesis.tex
+%
+% The "main" document which is passed to the LaTeX build system (probably pdfTeX). Set this document as the "master"
+% document in your LaTeX editor so that hitting "build" will compile this file and not the chapter file being edited.
+% Input files such as chapters are included using the \input command.
+%
+% ******************************************************************************************************************
+
+\input{Preamble.tex}
+
+% Uncomment while editing to remove the bibliography.
+%
+% \makeatletter
+% \def\bibliography#1{%
+%    \if@filesw
+%    \immediate\write\@auxout{\string\bibdata{#1}}%
+% \fi}
+% \makeatother
+
+
+% Uncomment while editing MyChapter.
+%
+% \inputonly{MyChapter}
+
+
+\begin{document}
+
+\input{Preface}
+\tableofcontents
+\pagestyle{plain}
+
+\input{Intro}
+\input{MyChapter}
+\input{Appendix}
+
+\bibliography{mybib}
+\bibliographystyle{abbrv}
+\end{document}

@@ -1,0 +1,59 @@
+
+\chapter{Further directions} % (fold)
+\label{sub:further_research}
+We end by outlining three directions in which this work can be developed. Fix a smooth scheme $B$ over $\CC$ and vector bundle $E$ of rank $r_E$ on $B$.  
+\section{Chern character formula} % (fold)
+\label{sec:FCCF}
+We hope to find a generalisation to the Chern character formula of Theorem \ref{thm:maina}. The proof we presented required the assumption that $λ$ is proportional to the canonical partition $σ_{r_E,r}$ for some tuple $r$, but it is easy to verify computationally that this assumption is not required for the statement to be true in many special cases. Perhaps it is possible to use Schubert calculus to reduce inductively to the case solved in this thesis. The assumption on the partition forced us to make a highly undesirable restriction in our choice of polarisation for the flag bundle in our discussion of its K-stability in Chapter \ref{chap:flags}. 
+
+Decompose $\ch E^{kλ}$ as follows
+\begin{equation}\label{eq:chernApp}
+	\ch E^λ =\rank E^{kλ} \sum_{i=1}^bB_i(E,kλ),
+\end{equation} 
+where $B_i(E,λ)$ has degree $i$ in the Chow ring of $B$. Then expand $B_i(E,kλ)$ by decreasing degree in $k$ as 
+\begin{equation}\label{eq:chernDec}
+	B_i(E,λ) = B_{i,0} k^i +B_{i,1} k^{i-1} + \dotsb + B_{i,i} k^0,
+\end{equation}
+It seems that a general closed formula for the polynomials $B_{ij}(E,λ)$ in the expansion \ref{eq:chernDec} should be attainable, generalising Manivel's beautiful result stated in Theorem \ref{thm:manivel}.
+
+\section{Flag bundles and projective bundles} % (fold)
+\label{sec:FRKS}
+	Let $(B,L)$ be a smooth polarised variety of dimension $b$ and $E$ is a vector bundle on $B$.
+	
+	If the underlying vector bundle has higher rank, K-stability of its flag bundles depends on higher Chern classes, which were cancelled out by considering adiabatic polarisations in Section~\ref{sec:anybase}. It would be interesting to know if such dependence has a geometric interpretation. This would require generalising Theorem \ref{thm:maina} describing terms in Equation~\eqref{eq:chernDec}.
+	
+	In the adiabatic case that it suffices to calculate $B_{i,0}$ and $B_{i,1}$. While this is possible for fixed $k$ and $λ$, it does not seem easy to generalise the arguments of \cite{manivel1994theoreme} or Chapter \ref{chap:chern} to obtain the coefficients $B_{i,j}$. For general polarisations, the knowledge of the term $B_{3,1}$ would immediately allow the calculation of Donaldson-Futaki invariants of any test configuration induced a subbundle filtration $F\subset E$, and the base $B$ has dimension 2. It may be possible to extend the arguments of Chapter \ref{chap:chern} to this case.
+	
+	Classical flag varieties which are studied in this work are only one example of a more general construction. Let $G$ be a semisimple complex group. Then quotients of $G$ by subgroups containing the Borel subgroup of $G$ are projective varieties. We call such a variety a \emph{generalised flag manifold}. They are classified by subsets of nodes on Dynkin diagrams of the Dynkin diagram of the corresponding group $G$. From the point of view of Kähler geometry, generalised flag manifolds have very similar properties to the classical ones.
+	
+	A Borel-Weyl pushforward formula, similar to one stated in Section~\ref{sec:relative_flag_varieties} for classical flag bundles, also holds for the symplectic and orthogonal groups \cite[Chapter 4]{Weyman}. For example, if $F$ is a vector bundle of even rank on the base $B$ and
+	\begin{equation}
+		\langle\cdot,\cdot\rangle: F\times_B F\rightarrow \CC 
+	\end{equation}
+	is a symplectic form. We define the isotropic flag variety $\mathop{\shI\shF\it{lag}}\nolimits_r(E)$ of $r$-flags of isotropic subspaces in $F^*$. Subbundles of $F$ can be used to define test configurations of $\mathop{\shI\shF\it{lag}}\nolimits_r(E)$. It would be interesting to know if the behaviour of the Donaldson-Futaki invariants is similar to that seen in Chapter \ref{chap:flags}. 
+	
+% section Relative_K_stability (end)
+
+\section{Relative K-stability and operations on test configurations} % (fold)
+\label{sec:operations_on_test_configurations}
+% Several aspects of the construction of the convex combination
+% \begin{equation}
+% 	\X_t \defeq (1-t)[\X] + t[\X']
+% \end{equation}
+% of two relative test configurations are left uninvestigated in this work. For example, we have not included a proof of the statement that $\test(Y)$ is a convex subset of $\test_B(Y)$.
+
+
+
+% Assume from now on that $\X_t$ is ample. While proving the continuity of the Futaki invariant of $\X_t$ in $t$ seems difficult, the continuity of the norm of $\X_t$ with respect to the parameter $t$ should be provable through a description of the convex transforms of $\X_t$ (cf. Example \ref{ex:toric}, \cite{witt2012test}, \cite{szekelyhidi2011filtrations}). Besides the the example of toric varieties in Example \ref{ex:toric}, we have not given any interpretation of the irrational locus of $\X_t$. Perhaps the family $\X_t$ behaves well under the map which takes elements of $\fAlg$ to the set of \emph{analytic test configurations} as defined in \cite[Section 7]{ross2014analytic}.
+Ampleness of the relative test configurations was not discussed in this work. This is a fundamental property which brings us back to the theory of K-stability. An effective result is not known to us even in the flag bundle case. 
+
+We believe that explicitly computing Donaldson-Futaki invariants of families of test configurations in examples can be used to exhibit  new interesting behaviour of K-stability in the cone of polarisations. We hope this may help in establishing a conjectural picture for the behaviour of K-stability in families of polarised varieties where the polarisation $L$ varies on a fixed underlying variety $X$. 
+
+The calculations presented in this work could be generalised to give further examples of K-unstable varieties. For example, the stability of higher dimensional projective bundles is still wide open over a higher dimensional base and Donaldson-Futaki invariants have only been computed for very simple test configurations. Finding an explicit formula for the Donaldson-Futaki invariant similar to one found in Example \ref{ex:PBundle} should be possible in higher dimensions, particularly, if the vector bundle is a direct sum of two line bundle. We believe that it should be possible to, for example, find a examples of \emph{nonalgebraic obstructions} on both rational and irrational polarisations this way by using Remark \ref{rem:irrextension}.
+
+Although we do not expect it to have applications to K-stability, describing the convex geometry associated to convex transforms on moving Okounkov bodies as the polarisation varies, discussed in Section \ref{sec:convex_transform_okounkov_bodies_and_examples}, is an interesting on its own right.  
+
+% section operations_on_test_configurations (end)
+
+
+%chapter further_research (end)
